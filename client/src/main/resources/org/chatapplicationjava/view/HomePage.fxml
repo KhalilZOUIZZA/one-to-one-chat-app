@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import de.jensd.fx.glyphs.testapps.*?>
+<?import de.jensd.fx.glyphs.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.chatapplicationjava.controller.HomePageController">
+   <children>
+      <TabPane prefHeight="500.0" prefWidth="320.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="  Contacts  ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <padding>
+                        <Insets top="15.0" />
+                     </padding>
+                     <children>
+                        <TextField layoutX="5.0" layoutY="7.0" prefWidth="270.0" />
+                        <ScrollPane layoutY="45.0" prefHeight="439.0" prefWidth="320.0">
+                           <content>
+                              <VBox fx:id="contactChildren" prefHeight="0" prefWidth="300.0">
+                                 
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" focusTraversable="true" layoutX="286.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/search-icon-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="280.0" layoutY="7.0" mnemonicParsing="false" opacity="0.26" prefWidth="35.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="  Requests  ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="361.0" prefWidth="14.0">
+                     <children>
+                        <TextField layoutX="5.0" layoutY="7.0" prefWidth="270.0" />
+                        <ScrollPane layoutY="45.0" prefHeight="416.0" prefWidth="320.0">
+                           <content>
+                              <VBox fx:id="RequestsChildren" prefHeight="0" prefWidth="310.0" />
+                           </content>
+                        </ScrollPane>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" focusTraversable="true" layoutX="286.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/search-icon-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="280.0" layoutY="7.0" mnemonicParsing="false" opacity="0.26" prefWidth="35.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="  Add New Contacts ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="searchContactInput" layoutX="5.0" layoutY="7.0" prefWidth="270.0" />
+                        <ScrollPane layoutY="45.0" prefHeight="416.0" prefWidth="320.0">
+                           <content>
+                              <VBox fx:id="addContactChildren" prefHeight="0" prefWidth="300.0">
+                                 
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" focusTraversable="true" layoutX="286.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/search-icon-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <Button id="filterContacts" onAction="#handleSearch" layoutX="280.0" layoutY="7.0" mnemonicParsing="false" opacity="0.26" prefWidth="35.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="600.0" layoutY="229.0" text="Welcome to 4BeansApp" />
+   </children>
+</Pane>

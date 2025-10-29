@@ -1,0 +1,21 @@
+.button {
+    -fx-shape: "M 0,50 A 50,50 0 1,1 100,50 A 50,50 0 1,1 0,50"; /* Full circle */
+    -fx-background-color: #f00000; /* Default color when not toggled */
+    -fx-text-fill: white;
+    -fx-background-radius: 50;
+    -fx-border-color: #000000; /* Border color */
+    -fx-border-width: 2; /* Border width */
+
+}
+
+.button:selected {
+    -fx-background-color: #0fb833; 
+}
+.Back_ground {
+    -fx-background-color: #ced7e0; 
+}
+.output {
+    -fx-background-color: #000000; 
+
+}
+
